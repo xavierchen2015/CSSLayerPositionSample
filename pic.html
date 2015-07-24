@@ -1,0 +1,101 @@
+<html>
+<head>
+	<style type="text/css">
+     /* Layer 3>2>1 都要是 position: absolute; */
+     .test{
+     	position: absolute;
+     	background-position: -89 -711px;
+     	width: 66px;
+        height: 64px;
+     	background-image:url(allicon.jpg);
+     	z-index: 2; 
+     	}
+     /*固定定位（position: fixed）的元素會相對於瀏覽器視窗來定位，這意味著即便頁面捲動，它還是會固定在相同的位置。*/
+     .fixed {
+       position: fixed;
+       top: 100;
+       right: 100;
+       width: 200px;
+       background-color: white;
+     }
+
+     .test1{
+     	background-position: -2 -664px;
+     	width: 165px;
+        height: 165px;
+     	background-image:url(allicon1.jpg);
+     	}
+     .test2{
+     	position: absolute;
+     	top: 10px;
+     	left: 10px;
+     	background:rgba(30%,0%,0%,0.6);
+     	width: 66px;
+        height: 64px;
+        z-index: 1;
+     	}
+     .test3{
+     	position: absolute;
+     	top: 30px;
+     	left: 30px;
+     	background:#aaaaaa;
+     	width: 66px;
+        height: 64px;
+        z-index: 3;
+     	}
+     /*static 是預設值。任何套用 position: static; 的元素「不會被特別定位」在頁面上特定位置，而是照著瀏覽器預設的配置自動排版在頁面上*/
+     .test4{
+        position: static;
+        background:#674566;
+        margin-top: 10;
+        width: 200px;
+        height: 200px;
+        }
+     .test5{
+        position: relative;
+        background:#123456;
+        margin-top: 5;
+        width: 100px;
+        height: 100px;
+        }
+     .test6{
+        position: relative;
+        background:#876544;
+        top: -20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        }
+     .test7{
+        position: absolute;
+        background:#637545;
+        top: 40px;
+        left: 70px;
+        width: 60px;
+        height: 50px;
+        }
+	</style>
+</head>
+<!-- 參考網頁 http://zh-tw.learnlayout.com/position.html -->
+<body>
+	<div class="test"> </div>
+    <div class="fixed">
+	   <div class="test1"> </div>
+    </div>
+	<div class="test2"><a href="#">test2</a> </div>
+	<div class="test3">33333333</div>
+    <div class="test4">44444444</div>
+    <div class="test5">44444444</div>
+    <div class="test4">44444444</div>
+    <div class="test6">6666666</div>
+    <div class="test4">44444444</div>
+    <div class="test4">44444444</div>
+    <div class="test4">44444444</div>
+    <div class="test5">5555555
+        <div class="test7">7777777</div>
+    </div>
+    <div class="test4">44444444</div>
+    <div class="test4">44444444</div>
+    <div class="test4">44444444</div>
+</body>
+</html>
